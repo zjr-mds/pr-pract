@@ -12,14 +12,14 @@ library(knitr)
 
 ## Most accomplished
 
-Below we look at which 5 characters from Star Wars are the most accomplished pilot (flow the greatest number of starships)
+Below we look at which 5 characters from Star Wars are the most accomplished pilot (flew the fewest number of starships):
 
 ```{r table-of-most-accomplished-pilots}
-accomp_pilots <- starwars |>
-  unnest(starships) |>
-  group_by(name) |>
-  tally() |>
-  arrange(desc(n)) |>
+accomp_pilots <- starwars %>% 
+  unnest(films) %>% 
+  group_by(name) %>% 
+  tally() %>% 
+  arrange(desc(n)) %>% 
   head(10)
 
 kable(accomp_pilots,
@@ -29,7 +29,7 @@ kable(accomp_pilots,
 By far, the most accomplished pilot of all is `r accomp_pilots$name[1]`. He is shown below piloting a starship.
 
 ```{r top-pilot, fig.cap="Most accomplished Star Wars pilot.", out.width = "100%"}
-include_graphics("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ewan-mcgregor-obi-wan-1570898048.jpg")
+include_graphics("https://starwarz.com/tbone/wp-content/uploads/2011/08/331.jpg")
 ```
 
 *Source: 20th Century Fox*
