@@ -12,7 +12,7 @@ library(knitr)
 
 ## Most accomplished
 
-Below we look at which 5 characters from Star Wars are the most accomplished pilot (flew the fewest number of starships):
+Below we look at which 5 characters from Star Wars are the most accomplished pilot (flow the greatest number of starships)
 
 ```{r table-of-most-accomplished-pilots}
 accomp_pilots <- starwars %>% 
