@@ -1,0 +1,20 @@
+---
+title: "Star Wars pilots"
+output: github_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Most accomplished
+
+Below we look at which 5 characters from Star Wars are the most accomplished pilot (flew the fewest number of starships):
+
+```{r table-of-most-accomplished-pilots}
+```
+
+By far, the most accomplished pilot of all is ????. He is shown below piloting a starship.
+
+```{r top-pilot, fig.cap="Most accomplished Star Wars pilot.", out.width = "100%"}
+```
