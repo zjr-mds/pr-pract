@@ -15,11 +15,11 @@ library(knitr)
 Below we look at which 5 characters from Star Wars are the most accomplished pilot (flow the greatest number of starships)
 
 ```{r table-of-most-accomplished-pilots}
-accomp_pilots <- starwars %>% 
-  unnest(films) %>% 
-  group_by(name) %>% 
-  tally() %>% 
-  arrange(desc(n)) %>% 
+accomp_pilots <- starwars |>
+  unnest(starships) |>
+  group_by(name) |>
+  tally() |>
+  arrange(desc(n)) |>
   head(10)
 
 kable(accomp_pilots,
